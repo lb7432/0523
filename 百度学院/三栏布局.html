@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title></title>
+  <style type="text/css">
+  /*自适应宽度原理,两边左右浮动,中间只设外边距,高度不限*/
+ 
+  	*{
+  		margin: 0;
+  		padding: 0;
+  	}
+  	/*大盒子*/
+  	#box-one{
+  		min-width: 540px;
+  		min-height: 460px;
+  		margin: 20px;
+  		padding: 20px;
+  		border: 1px solid #999;
+  		background: #eee;
+  		font-size: 14px;
+  	}
+  	/*左边第一个*/
+  	#box-left{
+  		width: 200px;
+  		height: 120px;
+  		border: 1px solid #999;
+  		background: #fff;
+  		position: relative;
+  		float: left;
+  	}
+  	/*左边里的小80x80*/
+  	#box-left-one{
+  		width: 80px;
+  		height: 80px;
+  		border: 1px solid #999;
+  		margin: 20px 0 20px 20px;
+  		background: #eee;
+  		text-align: center;
+  		display: table;
+  		float: left;
+  	}
+  	/*80x80内容*/
+  	#ba{
+  		vertical-align:middle;
+		display:table-cell; 
+  	}
+  	#name{
+  		display: block;
+  		float: left;
+  		margin-top: 20px;
+  		margin-left: 20px;
+  	}
+  	/*右边盒子*/
+  	#box-right{
+  		width: 120px;
+  		height: 420px;
+  		border: 1px solid #999;
+  		float: right;
+  		background: #fff;
+  	}
+  	/*右边小盒子*/
+  	#box-right-one{
+  		width: 80px;
+  		height: 80px;
+  		border: 1px solid #999;
+  		margin: 20px 0 0 20px;
+  		background: #eee;
+  		text-align: center;
+  		display: table;
+  		float: left;
+  		margin-top: 19px;
+  	}
+  	/*中间的盒子*/
+  	#box-center{
+  		border: 1px solid #999;
+  		margin-left: 220px;
+  		margin-right: 140px;
+  		padding: 20px 20px 0 20px;
+  		text-indent:2em;
+  		/*word-wrap: break-word;*/
+  	}
+  </style>
+  </head>
+ <body>
+ 	<div id="box-one">
+ 		<div id="box-left">
+ 			<div id="box-left-one">
+ 				<span id="ba">
+ 					团队logo<br />
+ 					80x80
+ 				</span>
+ 			</div>
+ 			<span id="name">团队名称</span>
+ 		</div>
+ 		<div id="box-right">
+ 			<div id="box-right-one">
+ 				<span id="ba">
+ 					个人logo<br />
+ 					80x80
+ 				</span>
+ 			</div>
+ 			<div id="box-right-one">
+ 				<span id="ba">
+ 					个人logo<br />
+ 					80x80
+ 				</span>
+ 			</div>
+ 			<div id="box-right-one">
+ 				<span id="ba">
+ 					个人logo<br />
+ 					80x80
+ 				</span>
+ 			</div>
+ 			<div id="box-right-one">
+ 				<span id="ba">
+ 					个人logo<br />
+ 					80x80
+ 				</span>
+ 			</div>
+ 		</div>
+ 		<div id="box-center">
+ 			<p>在维修点，记者见到了多位年龄在50岁左右的修车技师，除了一位在呼家楼地区拥有自己的摊位，多数人是重操就业。目前，每个人早上9点到岗，基本要修车到晚上6点，如果专修补胎等小故障，每天可以修50辆左右，若车身、轴承等受损，工作量则会锐减到一半以下。作为老技师，近60岁的张师傅从1996年开始学习修车，据其回忆，尽管经济飞速发展，北京人的交通方式也变得多样化，但自行车仍是当时人们出行的主选，大部分人出行的路程都在几公里左右，自行车是上下班、接送孩子、买菜的得力助手。老少人群都知道凤凰、永久、飞鸽等主流品牌，骑车的人多，修车的生意也不错。据张师傅回忆，上世纪90年代，粘车胎在2角钱左右，现在是3元左右。2005年前后，北京市电动自行车的数量飞快地增长起来，可电动车的故障不单有类似普通自行车的机械故障，还需要涉及电路板等知识，这就要求修车师傅需不断学习才能修理新的故障，许多人觉得这不仅麻烦，赚钱也少，基本就不再做了。除了张师傅这种在职的技师，还有专门从外地来京修车的师傅，河北邯郸的王师傅正是其中一员，王师傅与张师傅年纪相仿，不同的是，王师傅生活在乡村，多数时间都在照料农活，年龄大了以后专门在村里修过几年，此前，他经人介绍前往北京工业大学维修共享单车，随后便被推荐来了此处。发现 收车人每天路边找坏车 日均送修600辆探访期间，记者见到多辆三轮车将受损小黄车送抵该地，记者了解到，这些人在运送破损车辆的同时，也会将已经修好的车辆再次运回投放地。一位工作人员表示，今年2月份前后，该维修站便已存在。他个人每天基本运送三次，平均每次12辆，晚上6点之前，还需要再送一批。根据其了解，像他这样的工人有近20位，平均每人都要送30辆，日均送修近600辆。看到共享单车被肆意破坏，多位运送车辆的工人表示惋惜，“这是为百姓提供便利的交通工具，正常使用不会坏成这样，大部分都是被恶意破坏的。”据介绍，该处存放点的车辆大多是在东直门、青年路地区发现的。文/记者 徐琨尧
+　相关 全市义工志愿者 “守护”共享单车为规范共享单车停放秩序，全市志愿者、义工将成为共享单车的“守护人”，及时劝阻破坏、乱停乱放共享单车的行为，并带头规范停放。擦车座、拭车把、把车辆码放整齐……今天上午在角门东地铁站门前，一群穿着红色马甲的志愿者、义工队伍把这里的共享单车收拾得利利落落.</p>
+ 		</div>
+ 	</div>
+ </body>
+</html>
