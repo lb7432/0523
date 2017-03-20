@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title></title>
+  <style type="text/css">
+  	*{
+  		margin: 0;
+  		padding: 0;
+  	}
+  	#main_box{
+  		width: 1280px;
+  		height: 4554px;
+  		/*border: 1px solid darkblue;*/
+  		margin: 0 auto;
+  		box-shadow: 0px 0px 2px 1px gray;
+  	}
+  	/*头部导航栏*/
+  	nav{
+  		width: 100%;
+  		height: 56px;
+  		position: relative;
+  	}
+  	nav>img{
+  		position: absolute;
+  		top: 12.5px;
+  		left: 57px;
+  	}
+  	nav>span{
+  		font-size: 21px;
+  		font-family: "黑体";
+  		line-height: 56px;
+  		margin-left: 100px;
+  		color: #303030;
+  	}
+  	nav ul{
+  		position: absolute;
+  		right: 135px;
+  		top: 12px;
+  	}
+  	nav ul li{
+  		float: left;
+  		list-style: none;
+  		width: 65px;
+  		height: 38px;
+  		/*border: 1px solid red;*/
+  		line-height: 38px;
+  		text-align: center;
+  		margin-right: 32px;
+  		font-family: "微软雅黑";
+  		font-size: 14px;
+  		color: #787B83;
+  	}
+  	nav ul li:hover{
+  		color: #E74F4D;
+  		border-bottom: 5px solid #E74F4D;
+  		/*transition: all 0.5s linear;*/ 
+  		cursor: pointer;
+  	}
+  	nav .land{
+  		width: 63px;
+  		height: 56px;
+  		/*border: 1px solid red;*/
+  		position: absolute;
+  		right: 30px;
+  		top: 0;
+  		text-align: center;
+  	}
+  	nav .land a{
+  		text-decoration: none;
+  		font-family: "微软雅黑";
+  		font-size: 15px;
+  		color: #E74F4D;
+  		line-height: 56px;	
+  		display: block;
+  	}
+  	nav .land a:hover{
+  		background:#E74F4D;
+  		color: #fff;
+  	}
+  	/*登陆弹框*/
+  	#tankuang{
+  		width: 350px;
+  		height: 250px;
+  		display: none;
+  	}
+  	#tankuang #but{
+  		display: block;
+  		width: 250px;
+  		height: 45px;
+  		margin: 30px auto 0;
+  		background: indianred;
+  		background: -webkit-linear-gradient(top,darkred,indianred);
+  		color: white;
+  		border: 1px solid white;
+  		border-radius: 5px;
+  		font-size: 16px;
+  		cursor: pointer;
+  	}
+  	#tankuang .ipt{
+  		display: block;
+  		border: 0.8px solid #DDDDDD;
+  		width: 300px;
+  		height: 40px;
+  		margin: 25px auto 0;
+  	}
+  	#tankuang #but:hover{
+  		background: -webkit-linear-gradient(bottom,darkred,indianred);
+  	}
+  	#main_box .big_pic{
+  		width: 1280px;
+  		height: 700px;
+  		float: left;
+  		position: relative;
+  		overflow: hidden;
+  	}
+  	#main_box .big_pic .big_pic_bg{
+  		width: 1280px;
+  		height: 700px;
+  		float: left;
+  		position: absolute;
+  		top: 0px;
+  		left: 0px;
+  		background: black;
+  		opacity: 0.3;
+  	}
+  	#main_box .big_pic .big_pic_text{
+  		width: 477px;
+  		height: 284px;
+  		position: absolute;
+  		top: 218px;
+  		left: 110px;
+  		z-index: 30;
+  	}
+  	#main_box .big_pic .big_pic_text .life{
+  		font-size: 60px;
+  		font-family: "微软雅黑";
+  		color: #fff;
+  	}
+  	#main_box .big_pic .big_pic_text p{
+  		font-family: "微软雅黑";
+  		font-size: 21px;
+  		color: #fff;
+  		line-height: 30px;
+  	}
+  	#main_box .big_pic .big_pic_text input{
+  		width: 330px;
+  		height: 65px;
+  		background: #E74F4D;
+  		border: none;
+  		font-family: "微软雅黑";
+  		font-size: 30px;
+  		color: #fff;
+  		position: absolute;
+  		bottom: 10px;
+  		left: 5px;
+  	}
+  	#main_box .big_pic .big_pic_text input:hover{
+  		cursor: pointer;
+  		background: darkred;
+  		transition: all 0.5s;
+  	}
+  	/*第三部分*/
+  	#main_box .three{
+  		width: 100%;
+  		height: 250px;
+  		float: left;
+  	}
+  	#main_box .three .tubiao img{
+  		float: left;
+  		display: block;
+  		margin:45px 139px 0 139px;
+  	}
+  	#main_box .three .text{
+  		width:318px;
+  		height: 55px;
+  		float: left;
+  		margin-top: 40px;
+  		text-align: center;
+  		font-size: 14px;
+  		font-family: "黑体";
+  		color: #767777;
+  		border-left: 1px solid #767777;
+  	}
+  	/*第四部分*/
+  	
+  	#main_box .map{
+  		width: 100%;
+  		height: 341px;
+  		float: left;
+  		position: relative;
+  	}
+  	#main_box .map .input{
+  		width: 1060px;
+  		height: 35px;
+  		position: absolute;
+  		top:172px;
+  		left: 110px;
+  		235 35
+  	}
+  	#main_box .map .input select{
+  		width: 235px;
+  		height: 35px;
+  		float: left;
+  		margin-left: 14px;
+  		margin-right: 14px;
+  		appearance: none;
+  		-moz-appearance: none;
+  		-webkit-appearance: none;
+  		background: url(77.jpg) no-repeat right center #fff;
+  		border: none;
+  		color: #777777;
+  	}
+  	#main_box .map .input input{
+  		width: 235px;
+  		height: 35px;
+  		float: left;
+  		margin-left: 15px;
+  		margin-right: 15px;
+  		font-family: "微软雅黑";
+  		font-size: 14px;
+  		background: #E74F4D;
+  		color: #fff;
+  		border: none;
+  	}
+  	/*第六部分相框*/
+  	#main_box .xiangkuang{
+  		width: 1280px;
+  		height: 606px;
+  		float: left;
+  		background: #F7F7F7;
+  	}
+  	#main_box .xiangkuang div{
+  		width: 223px;
+  		height: 343px;
+  		 margin-right: 36px;
+  		margin-top: 100px;
+  		float: left;
+  	}
+  	#main_box .xiangkuang img{
+  		border-top: 12px solid #ffffff;
+    	border-bottom: 12px solid #ffffff;
+    	border-left: 7px solid #ffffff;
+    	border-right: 7px solid #ffffff;
+    	box-shadow: 0 0 0 3px #e0e0e0;
+    	transition: all 0.5s;
+  	}
+  	#main_box .xiangkuang .one{
+  		margin-left: 152px;
+  		margin-right: 36px;
+  		float: left;
+  	}
+  	#main_box .xiangkuang img:hover{
+  		transform: scale(1.1);
+  		cursor: pointer;
+  	}
+  	/*第7部分*/
+  	#main_box .seven{
+  		width: 100%;
+  		height: 567px;
+  		float: left;
+  	}
+  	#main_box .seven .seven_right{
+  		width: 308px;
+  		height: 567px;
+  		/*border: 1px solid red;*/
+  		float: right;
+  		padding: 0 60px 0 60px;
+/*  		text-align: center;*/
+  	}
+  	#main_box .seven .seven_right h2{
+  		display: table;
+  		margin: 0 auto;
+  		font-family: "黑体";
+  		color: #2C2C2C;
+  		margin-top: 160px;
+  	}
+  	#main_box .seven .seven_right h2 span{
+  		color:#E74F4D ;
+  	}
+  	#main_box .seven .seven_right p{
+  		color:#B4B4B4 ;
+  		font-size: 12px;
+  		font-family: "宋体";
+  		margin-top: 20px;
+  		letter-spacing: 1px;
+  		line-height: 35px;
+  	}
+  	#main_box .seven .seven_right input{
+  		display: table;
+  		margin: 0 auto;
+  		width: 106px;
+  		height: 33px;	
+  		margin-top: 45px;
+  		border: 1px solid #E74F4D;
+  		color: #E74F4D;
+  		background: #fff;
+  	}
+  	#main_box .seven .seven_right input:hover{
+  		background: #E74F4D;
+  		color: #fff;
+  		cursor: pointer;
+  	}
+  	#main_box .seven .seven_right>div{
+  		width: 78px;
+  		height: 15px;
+  		margin: 0 auto;
+  		margin-top: 25px;
+  	}
+  	#main_box .seven .seven_right>div div{
+  		width: 10px;
+  		height: 10px;
+  		border-radius: 50%;
+  		border: 1px solid #919192;
+  		float: left;
+  		margin-left: 7px;
+  		margin-right: 7px;
+  	}
+  	#main_box .nine{
+  		width:100%;
+  		height: 750px;
+  		float: left;
+  		/*border: 1px solid red;*/
+  		background: url(9.jpg) no-repeat;
+  	}
+  	#main_box .nine .input{
+  		width: 640px;
+  		height: 284px;
+  		/*border: 1px solid red;*/
+  		margin-left: 500px;
+  		margin-top: 300px;
+  	}
+  	#main_box .nine .input .xinxi{
+  		width: 311px;
+  		height: 40px;
+  		margin-bottom: 14px;
+  		border: none;
+  		background: #EDEDEE;
+  	}
+  	#main_box .nine .input .xinxi.tb{
+  		float: right;
+  	}
+  	#main_box .nine .input textarea{
+  		margin-bottom: 14px;
+  		border: none;
+  		background: #EDEDEE;
+  	}
+  	#main_box .nine .input .but{
+  		width: 640px;
+  		height: 40px;
+  		border: none;
+  		background: #EDEDEE;
+  		color: #6E6765;
+  		font-family:'黑体';
+  	}
+  	#main_box footer{
+  		width: 100%;
+  		height: 405px;
+  		background: url(foot.jpg) no-repeat;
+  		background-size: 100% 100%;
+  		float: left;
+  	}
+  	#main_box footer .put{
+  		width: 516px;
+  		height: 41px;
+  		margin: 0 auto;
+  		margin-top: 183px;
+  	}
+  	#main_box footer .put .email{
+  		width: 431px;
+  		height: 41px;
+  		background: #fff;
+  		border: none;
+  		float: left;
+  	}
+  	#main_box footer .put .sub{
+  		width: 80px;
+  		height: 41px;
+  		background: #6F7178;
+  		color: #fff;
+  		border: none;
+  		float: left;
+  		font-size: 16px;
+  	}
+  </style>
+  </head>
+ <body>
+ 	<div id="main_box">
+ 		<nav>
+ 			<img src="9555.jpg"/>
+ 			<span>新世界</span>
+ 			<ul>
+ 				<li>首页</li>
+ 				<li>最新活动</li>
+ 				<li>项目介绍</li>
+ 				<li>爱心社区</li>
+ 				<li>关于我们</li>
+ 			</ul>
+ 			<div class="land">
+ 				<a href="#">登陆</a>
+ 			</div>
+ 		</nav>
+ 		<div id="tankuang">
+ 			<input type="text"class="ipt"id="tex"placeholder="用户名..." />
+ 			<input type="password"class="ipt"id="psw"placeholder="密码...." />
+ 			<input type="submit" id="but" value="登陆" />
+ 		</div>
+ 		<div class="big_pic">
+ 			<img src="5555.jpg"/>
+ 			<div class="big_pic_bg"></div>
+ 			<div class="big_pic_text">
+ 				<span class="life">Time of new life</span>
+ 				<p>新时代，年轻的人们让我们一起<br>体验新生活，享受新生活</p>
+ 				<input type="submit" name="" id="" value="开始体验" />
+ 			</div>
+ 		</div>
+ 		<div class="three">
+ 			<div class="tubiao">
+ 				<img src="1.jpg"/>
+ 				<img src="2.jpg"/>
+ 				<img src="3.jpg"/>
+ 				<img src="4.jpg"/>
+ 			</div>
+ 				<div class="text"style="border-left: none;"><p>打造全新世界观，让你更<br>爱你的生活</p></div>
+ 				<div class="text"><p>丰富多彩的公益活动，发<br>挥新世界的主人公意识</p></div>
+ 				<div class="text"><p>时尚的新理念，超前体验<br>未知的生活</p></div>
+ 				<div class="text"><p>完善的培养机制，培养你<br>全新的世界观</p></div>
+ 		</div>
+ 		<img src="666.jpg" style="display: block;"/>
+ 		<div class="map">
+ 			<img src="88.jpg" style="display: block;"/>
+ 			<div class="input">
+ 				<select name="">
+ 					<option value="">中国</option>
+ 				</select>
+ 				<select name="">
+ 					<option value="">中国</option>
+ 				</select>
+ 				<select name="">
+ 					<option value="">中国</option>
+ 				</select>
+ 				<input type="submit" name="" id="" value="搜索" />
+ 			</div>
+ 		</div>
+ 		<div class="xiangkuang">
+ 			<div class="one">
+ 				<img src="6one.jpg"/>
+ 			</div>
+ 			<div class="two">
+ 				<img src="6two.jpg"/>
+ 			</div>
+ 			<div class="three">
+ 				<img src="6three.jpg"/>
+ 			</div>
+ 			<div class="four">
+ 				<img src="6four.jpg"/>
+ 			</div>
+ 		</div>
+ 		<div class="seven">
+ 			<img src="55.jpg"/>
+ 			<div class="seven_right">
+ 				<h2>新世界/<span>01</span></h2>
+ 				<p>新世界是个新世界是个新世界是个新世界是个新世界<br>新世界是个新世界是个新世界是个新世界是个新世界<br>
+ 				新世界是个新世界是个新世界是个新世界是个新世界<br><span style="margin-left: 0px;">新世界是个新世界是个新世界</span></p>
+ 				<input type="submit" name="" id="" value="更多详情" />
+ 				<div>
+ 					<div style="background: #919192;"></div>
+ 					<div></div>
+ 					<div></div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 		<img src="8.jpg"style="display: block;float: left;"/>
+ 		<div class="nine">
+ 			<div class="input">
+ 				<input type="text" name=""class="xinxi"value="" placeholder="姓名："/>
+ 				<input type="text" name=""class="xinxi tb"value="" placeholder="年龄："/>
+ 				<input type="text" name=""class="xinxi"value="" placeholder="联系方式："/>
+ 				<input type="text" name=""class="xinxi tb"value="" placeholder="联系地址："/>
+ 				<textarea name="" rows="8" cols="100"placeholder="请简单描述您梦想的生活..."></textarea>
+ 				<input type="button" name=""class="but" value="提交申请" />
+ 			</div>
+ 		</div>
+ 		<footer>
+ 			<div class="put">
+ 				<input type="text" name=""class="email" placeholder="1234567@163.com"/>
+ 			<input type="button" name=""class="sub" value="提交" />
+ 			</div>
+ 			
+ 		</footer>
+ 	</div>
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ </body>
+ <script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+ <script src="layer/layer.js" type="text/javascript" charset="utf-8"></script>
+ <script type="text/javascript">
+ 	$(function(){
+ 		$("#main_box .land").click(function(){
+ 			layer.open({
+   			type:1,
+   			title:"登陆",
+   			area:['350px','320px'],
+   			content:$("#tankuang"),
+ 			})
+ 		})
+ 	})
+ </script>
+</html>
