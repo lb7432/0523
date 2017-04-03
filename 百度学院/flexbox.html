@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title></title>
+  <style type="text/css">
+  	body{
+  		padding: 0;
+  		margin: 0;
+  		background: #E0E0E0;
+  	}
+  	#box{
+  		max-width: 768px;
+  		min-height: 442px;
+  		border: 1px solid rosybrown;
+  		display: flex;
+  		align-items:center;
+  		flex-wrap: wrap;
+  		flex-direction: row;
+  	}
+  	#box div{
+  		width: 150px;
+  		margin: 0 20px;
+  		border: 1px solid #f00;
+  	}
+  	#box .one{
+  		height: 120px;
+  	}
+  	#box .two{
+  		height: 100px;
+  	}
+  	#box .three{
+  		height: 40px;
+  	}
+   	#box .four{
+  		height: 200px;
+  		border: 1px solid #0f0;
+  		margin-top: 20px;
+  		margin-bottom: 20px;
+  	}
+  	@media(max-width: 640px) {
+  	#box .one{
+  			order: 2;
+  	}
+  	#box .two{
+		order: 3;
+  	}
+  	#box .three{
+		order: 4;
+  	}
+   	#box .four{
+		order: 1;
+  	}
+ }
+  	@media(min-width: 640px) {
+  	#box .one{
+  			order: 1;
+  	}
+  	#box .two{
+		order: 2;
+  	}
+  	#box .three{
+		order: 3;
+  	}
+   	#box .four{
+		order: 4;
+  	}
+}
+  </style>
+  </head>
+ <body>
+ 	<div id="box">
+ 		<div class="one"></div>
+ 		<div class="two"></div>
+ 		<div class="three"></div>
+ 		<div class="four"></div>
+ 	</div>
+ </body>
+</html>
